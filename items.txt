@@ -1,0 +1,1 @@
+a:3:{i:0;a:2:{s:4:"item";s:5:"item1";s:7:"checked";b:0;}i:1;a:2:{s:4:"item";s:5:"item2";s:7:"checked";b:0;}i:2;a:2:{s:4:"item";s:5:"item3";s:7:"checked";b:0;}}
