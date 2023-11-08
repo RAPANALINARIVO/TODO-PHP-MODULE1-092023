@@ -2,19 +2,14 @@
 include('fct/request.php');
 include('fct/getItem.php');
 include('config/app.php');
+
 $element=validate($_POST['element']);
 
-
-//verifier si file_name exist
-if(!file_exists(FILE_NAME))
-{
-    //creation de fichier s'il n'existe pas avec initialisation
-    file_put_contents(FILE_NAME,serialize([]));
-}
 
 // recuperation du contenus
 $items =getitem();
 $items[] = [
+    'id'=>uniqid(),
     'item'=>$element,
     'checked'=>false
     ];
@@ -22,5 +17,6 @@ $items[] = [
 //insertion des donnees ici
 file_put_contents(FILE_NAME,serialize($items));
 
+//save items
 //redirection vers l'index
 header('location:index.php');

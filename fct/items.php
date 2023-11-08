@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * retur les items
+ *
+ * @param string $item
+ * @return string
+ */
 function displayItems($item)
 {
     $html= '<li>
@@ -7,11 +13,20 @@ function displayItems($item)
 
                 <!-- checkbox -->
                 <div class="icheck-primary d-inline ml-2">
-                <input type="checkbox" value="" name="todo1" id="todoCheck1">
-                <label for="todoCheck1"></label>
-                </div>
+                <a href="toggleItem.php?item='.$item['id'].'"';
+    if($item['checked']){
+
+        $html.='<i class="far fa-check-square"></i>';
+    }else{
+        
+        $html.='<i class="far fa-square"></i>';
+    }
+        $html.='</a></div>
                 <!-- todo text -->
-                <span class="text">'.$item['item'].'</span>
+                <span class="text">'
+                .$item['id']
+                .$item['item'].
+                '</span>
                 <!-- Emphasis label -->
                 <!-- General tools such as edit or delete-->
                 <div class="tools">
@@ -21,3 +36,5 @@ function displayItems($item)
             </li>';
 return $html;
 }
+
+?>

@@ -3,6 +3,12 @@
 include('html/header.php');
 include('fct/items.php');
 include('fct/getItem.php');
+//verifier si file_name exist
+if(!file_exists(FILE_NAME))
+{
+    //creation de fichier s'il n'existe pas avec initialisation
+    file_put_contents(FILE_NAME,serialize([]));
+}
 ?>
 
     <!-- Main content -->
