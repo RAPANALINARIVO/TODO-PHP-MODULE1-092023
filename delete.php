@@ -7,9 +7,9 @@ $items=getitem();
 
 $id=validate($_GET['itemId']);
 
-$items[$id]['checked']=!$items[$id]['checked'];
-
+//supprime un id
+unset($items[$id]);
 
 saveItems($items);
 
-header('location:index.php');
+ header('location:index.php');

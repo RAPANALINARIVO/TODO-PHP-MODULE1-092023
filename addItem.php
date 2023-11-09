@@ -8,15 +8,13 @@ $element=validate($_POST['element']);
 
 // recuperation du contenus
 $items =getitem();
-$items[] = [
-    'id'=>uniqid(),
+$items[uniqid()] = [
     'item'=>$element,
     'checked'=>false
     ];
 
 //insertion des donnees ici
 file_put_contents(FILE_NAME,serialize($items));
-
 //save items
 //redirection vers l'index
 header('location:index.php');

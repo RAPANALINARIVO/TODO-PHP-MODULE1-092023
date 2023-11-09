@@ -3,6 +3,7 @@
 include('html/header.php');
 include('fct/items.php');
 include('fct/getItem.php');
+include('fct/request.php');
 //verifier si file_name exist
 if(!file_exists(FILE_NAME))
 {
@@ -31,9 +32,13 @@ if(!file_exists(FILE_NAME))
                 <ul class="todo-list " data-widget="todo-list">
                   <?php
                   $items=getitem();
-                    foreach ($items as $item) {
-                      echo displayItems($item);
+                  if ($items!==null) {
+                    foreach ($items as $key => $item){
+                      $item['id']=$key;
+                        echo displayItems($key,$item);
                     }
+                  }
+                    
                   ?>
                 </ul>
               </div>

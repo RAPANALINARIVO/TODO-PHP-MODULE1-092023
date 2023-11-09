@@ -13,6 +13,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/fontawesome.min.css">
+  <!-- <link rel="stylesheet" href="https//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/all.min.css"> -->
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
@@ -23,7 +25,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
       <a href="/" class="navbar-brand">
-        <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <img src="/images/sayna.png" alt="logo sayna" class="brand-image img-circle elevation-3" style="opacity: .8">
       </a>
 
       <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
